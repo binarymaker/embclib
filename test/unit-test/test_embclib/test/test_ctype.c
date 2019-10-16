@@ -19,7 +19,8 @@
   */
 
 #include "unity.h"
-#include "types.h"
+#include "ctype.h"
+#include "stddef.h"
 
 void
 setUp()
