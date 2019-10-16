@@ -12,7 +12,5 @@
 
 /docs/*
 !/docs/diagrams/
-/docs/diagrams/*
-!/docs/diagrams/source/
 
 
