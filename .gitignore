@@ -1,0 +1,18 @@
+
+\.vscode/
+
+*.log
+
+### keil for stm32 ###
+**/MDK-ARM/*
+!**/MDK-ARM/*.uvprojx
+!**/MDK-ARM/*.s
+
+test/**/build/**
+
+/docs/
+!/docs/diagrams/
+/docs/diagrams/*
+!/docs/diagrams/source/*
+
+
