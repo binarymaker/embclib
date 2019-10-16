@@ -1,0 +1,4 @@
+<map id="ToLower" name="ToLower">
+<area shape="rect" id="node1" title="Convert a character to lower case character. Ex. (a&#45;z) (A&#45;Z) to (a&#45;z)" alt="" coords="5,5,76,32"/>
+<area shape="rect" id="node2" href="$types_8h.html#a68f24cd2574fc0a1e04c47dfea828d21" title="Check a character is a upper case character or not. Ex. (A&#45;Z)" alt="" coords="124,5,191,32"/>
+</map>

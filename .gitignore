@@ -10,9 +10,9 @@
 
 /test/**/build/**
 
-/docs/*
-!/docs/diagrams/
-/docs/diagrams/*
-!/docs/diagrams/source/
+#/docs/*
+#!/docs/diagrams/
+#/docs/diagrams/*
+#!/docs/diagrams/source/
 
 

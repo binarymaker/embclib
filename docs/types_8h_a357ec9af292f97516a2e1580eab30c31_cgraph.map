@@ -1,0 +1,5 @@
+<map id="IsAlphaNumeric" name="IsAlphaNumeric">
+<area shape="rect" id="node1" title="Check a character is an alphabetic and number character or not. Ex. (a&#45;z) (A&#45;Z) (0&#45;9)" alt="" coords="5,31,119,57"/>
+<area shape="rect" id="node2" href="$types_8h.html#a2064e0f5e74bb3ff6a091475a87a50c4" title="Check a character is an alphabet or not. Ex. (a&#45;z) and (A&#45;Z)" alt="" coords="167,5,232,32"/>
+<area shape="rect" id="node3" href="$types_8h.html#a1ee80978436701749bbca0d574a740a4" title="Check a character is an number character or not. Ex. (0&#45;9)" alt="" coords="170,56,229,83"/>
+</map>

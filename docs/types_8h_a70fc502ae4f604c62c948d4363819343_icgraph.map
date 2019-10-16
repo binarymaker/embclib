@@ -1,0 +1,4 @@
+<map id="IsGraph" name="IsGraph">
+<area shape="rect" id="node1" title="Check a character is a graphical character or not. Ex. ! &quot; # $ % &amp; &#39; ( ) * + , &#45; ...." alt="" coords="120,5,187,32"/>
+<area shape="rect" id="node2" href="$types_8h.html#ab59c8e3eb783bf0d8c169d0fd78da03d" title="Check a character is a punctuation character or not. Ex. ! &quot; # $ % &amp; &#39; ( ) * + , &#45; ...." alt="" coords="5,5,72,32"/>
+</map>
