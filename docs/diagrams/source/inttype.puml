@@ -1,0 +1,15 @@
+
+@startuml
+
+
+package folder{
+  
+  !include utils.puml
+
+  class inttype
+  {
+    + Abs(uint32_t) : uint32_t
+  }
+  inttype --> utils
+}
+@enduml

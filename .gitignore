@@ -8,11 +8,11 @@
 !**/MDK-ARM/*.uvprojx
 !**/MDK-ARM/*.s
 
-test/**/build/**
+/test/**/build/**
 
-/docs/
+/docs/*
 !/docs/diagrams/
 /docs/diagrams/*
-!/docs/diagrams/source/*
+!/docs/diagrams/source/
 
 

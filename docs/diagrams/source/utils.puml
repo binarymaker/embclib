@@ -1,0 +1,16 @@
+@startuml utility-library
+
+class utils
+{
+    + Abs(uint32_t) : uint32_t
+    + Max(int32_t, int32_t) : int32_t
+    + UTILS_Min_i32(int32_t, int32_t) : int32_t
+    + UTILS_Rand_i32() : int32_t
+    + UTILS_Srand_i32(int32_t) : int32_t
+    + UTILS_Slope_i32(int32_t data, int32_t in_min, int32_t in_max,
+      int32_t out_min, int32_t out_max) : int32_t
+}
+
+hide utils attribute
+
+@enduml
