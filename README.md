@@ -4,11 +4,10 @@
 
 # Core library
 
-  + [types.h](https://htmlpreview.github.io/?docs/code-doc/html/types_8h.html)
-  + [regctrl](source/regctrl.h)
-  + [utils](source/utils.h)
+  + types
+  + regctrl
+  + utils
 
 # Architecture diagram
 
-![utility image](/docs/diagrams/out/utils/utility-library.png)
-![integer type](/docs/diagrams/out/inttype/inttype.png)
+![embclib uml image](/docs/diagrams/out/embclib/embclib.svg)

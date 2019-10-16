@@ -48,9 +48,9 @@
 #define REG_Write(reg, val)    \
     ((reg)  =  (val))
 
-#define REG_Read(reg, val)     ((reg))
+#define REG_Read(reg)     ((reg))
 
-#define REG_Modify(reg, clearmask, setmask)  \
+#define REG_Modify(reg, setmask, clearmask)  \
 REG_Write((reg), (((REG_Read(reg)) & (~(clearmask))) | (setmask)))
 
 #define REG_Cut(reg, bitpos, len)   \

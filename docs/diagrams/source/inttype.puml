@@ -1,15 +1,37 @@
+@startuml inttype
 
-@startuml
+class inttype << typedef >>
+{
+  int8_t : signed char
+  int16_t : signed int
+  int32_t : signed long int
+  int64_t : signed long long int
 
+  uint8_t : unsigned char
+  uint16_t : unsigned int : 
+  uint32_t : unsigned long int
 
-package folder{
-  
-  !include utils.puml
+  .. Type limits ..
+  + INT8_MAX  127
+  + INT8_MIN  -128
 
-  class inttype
-  {
-    + Abs(uint32_t) : uint32_t
-  }
-  inttype --> utils
+  + INT16_MAX  32767
+  + INT16_MIN  -32768
+
+  + INT32_MAX  2147483647
+  + INT32_MIN  -2147483648
+
+  + UINT8_MAX   255u
+  + UINT8_MIN   0u
+
+  + UINT16_MAX  65535u
+  + UINT16_MIN  0u
+
+  + UINT32_MAX  4294967295u
+  + UINT32_MIN  0u
 }
+
+hide inttype circle
+hide inttype Attribute
+
 @enduml

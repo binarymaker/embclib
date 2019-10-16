@@ -1,0 +1,30 @@
+@startuml regctrl
+
+class regctrl
+{
+    .. Bit mask ..
+  + BIT_Mask(bitpos)
+  + BIT_MaskFill(bitpos)
+  .. Bit manipulation ..
+  + BIT_Set(reg, bitpos)
+  + BIT_Clear(reg, bitpos)
+  + BIT_Read(reg, bitpos)
+  + BIT_Toggle(reg, bitpos)
+  .. Bit check ..
+  + BIT_IsSet(reg, bitpos)
+  + BIT_IsClear(reg, bitpos)
+  + BIT_IsAllSet(reg, bitmask)
+  + BIT_IsAnySet(reg, bitmask)
+  .. Bit group manipulation ..
+  + REG_Clear(reg)
+  + REG_Write(reg, val)
+  + REG_Read(reg)
+  + REG_Modify(reg, setmask, clearmask)
+  + REG_Cut(reg, bitpos, len)
+  + REG_Shift(val, bitpos)
+  + REG_RightShift(val, bitpos)
+
+}
+
+
+@enduml
