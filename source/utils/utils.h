@@ -39,7 +39,7 @@
  */
 #define __UTILS_VERSION      (0x0001u) /*!< version: 0.1v */
 
-#include "types.h"
+#include "stdint.h"
 
 /**
  * \brief Find the smaller value

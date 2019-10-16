@@ -16,63 +16,29 @@
   * this distribution.
   * Written by Binary Maker <https://github.com/binarymaker>
   ******************************************************************************
-\endcond */
+  \endcond*/
 
 /**
- * \file stddef.h
+ * \file complier-cfg.h
  * \author Binary Maker (https://github.com/binarymaker)
- * \brief Standard types and ctype function library
- * \date 2019-10-10
+ * \brief complier relative macros for optimization
+ * \date 2019-10-16
  */
 
-#ifndef STDDEF_05076ec2_ea68_11e9_8db3_705a0f25cb51
-#define STDDEF_05076ec2_ea68_11e9_8db3_705a0f25cb51
+#ifndef COMPLIER_e5a3b768_f000_11e9_95e9_705a0f25cb51
+#define COMPLIER_e5a3b768_f000_11e9_95e9_705a0f25cb51
 
 #ifdef __cplusplus
  extern "C" {
 #endif
 
-/**
- * \brief Source file version tag
- *        
- *        version info: [15:8] main [7:0] beta
- */
-#define __TYPES_VERSION      (0x0001u) /*!< version: 0.1v */
-
-#include "stdint.h"
-
-
-/**
- * \brief Boolean data type
- * 
- */
-typedef enum{
-  FALSE = 0,
-  TRUE
-}bool_et;
-
-/**
- * \brief Logical state data type 
- * 
- */
-typedef enum{
-  LOW = 0,
-  HIGH
-}state_et;
-
-/**
- * \brief Process (or) Functional state data type
- * 
- */
-typedef enum{
-  FAILED = 0,
-  SUCCESS,
-  BUSY,
-  TIMEOUT
-}status_et;
+#define _ASM_            __asm                 /*!< asm keyword for target Compiler   */
+#define _INLINE_         inline                /*!< inline keyword for target Compiler*/
+#define _STATIC_INLINE_  static inline         /*!< static inline combination for \
+                                                                inline function */
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* STDDEF_05076ec2_ea68_11e9_8db3_705a0f25cb51 */
+#endif /* COMPLIER_e5a3b768_f000_11e9_95e9_705a0f25cb51 */
