@@ -62,17 +62,18 @@ def main():
         path = args['directory'] + '/' + files["name"]
         file_create(path, files["text"])
 
-    os.chdir(args['directory'])
-    print(" ************* Git creation *************")
-    ret = subprocess.call("git init", shell=True)
-    git_config = settings["git_config"]
-    subprocess.call("git config user.name "+ git_config["name"], shell=True)
-    subprocess.call("git config user.email "+ git_config["email"], shell=True)
-    ret = subprocess.call("git checkout -b develop", shell=True)
-    if ret == 0:
-        subprocess.call("git add .", shell=True)
-        subprocess.call("git commit -m \"initial commit\" ", shell=True)
-        
+    if (args['git']):
+        os.chdir(args['directory'])
+        print(" ************* Git creation *************")
+        ret = subprocess.call("git init", shell=True)
+        git_config = settings["git_config"]
+        subprocess.call("git config user.name "+ git_config["name"], shell=True)
+        subprocess.call("git config user.email "+ git_config["email"], shell=True)
+        ret = subprocess.call("git checkout -b develop", shell=True)
+        if ret == 0:
+            subprocess.call("git add .", shell=True)
+            subprocess.call("git commit -m \"initial commit\" ", shell=True)
+
     os.chdir(args['directory'])
     
 if __name__ == "__main__":
