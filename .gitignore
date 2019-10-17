@@ -1,3 +1,7 @@
+# ignore everything ...
 /*
-!/config
-!/source
+# ... but the following
+!/.gitignore
+
+
+
