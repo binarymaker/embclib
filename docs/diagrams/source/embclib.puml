@@ -2,15 +2,16 @@
 
 package embclib
 {
-  package stdctypes
+  !include stdint.puml
+
+  package stddef
   {
-    !include types.puml
+    !include stddef.puml
   }
 
+  !include ctype.puml
   !include utils.puml
-  !include regctrl.puml
 
-  utils -[hidden]- regctrl
 }
 
 @enduml

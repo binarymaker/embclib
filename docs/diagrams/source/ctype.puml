@@ -1,13 +1,7 @@
-@startuml types-library
+@startuml ctype
 
-!include inttype.puml
-
-class types << typedef >>
+class ctype << typedef >>
 {
-  + bool_et : bool_e
-  + state_et : state_e
-  + status_et : Status_e
-
   + IsAlpha(uint8_t) : bool_et
   + IsDigit(uint8_t) : bool_et
   + IsAlphaNumeric(uint8_t) : bool_et
@@ -24,32 +18,6 @@ class types << typedef >>
   + ToLower(uint8_t) : uint8_t
 }
 
-enum bool_e
-{
-    FALSE
-    TRUE
-}
-
-enum state_e
-{
-    LOW
-    HIGH
-}
-
-enum status_e
-{
-    FAILED,
-    SUCCESS,
-    BUSY,
-    TIMEOUT
-}
-
-hide enum method
-
-inttype -up-> types
-bool_e -up-> types
-state_e -up-> types
-status_e -up-> types
-
+hide ctype attribute
 
 @enduml
