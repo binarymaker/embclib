@@ -19,14 +19,14 @@
 \endcond */
 
 /**
- * \file inttype.h
+ * \file stdint.h
  * \author Binary Maker (https://github.com/binarymaker)
  * \brief Standard interger data types based on integer length
  * \date 2019-10-10
  */
 
-#ifndef INTTYPE_f6dccee6_ea67_11e9_87ae_705a0f25cb51
-#define INTTYPE_f6dccee6_ea67_11e9_87ae_705a0f25cb51
+#ifndef STDINT_f6dccee6_ea67_11e9_87ae_705a0f25cb51
+#define STDINT_f6dccee6_ea67_11e9_87ae_705a0f25cb51
 
 #ifdef __cplusplus
  extern "C" {
@@ -165,4 +165,4 @@ typedef unsigned long int uint32_t  ;
 }
 #endif
 
-#endif /* INTTYPE_f6dccee6_ea67_11e9_87ae_705a0f25cb51 */
+#endif /* STDINT_f6dccee6_ea67_11e9_87ae_705a0f25cb51 */
