@@ -1,0 +1,5 @@
+<map id="IsAlpha" name="IsAlpha">
+<area shape="rect" id="node1" title="Check a character is an alphabet or not. Ex. (a&#45;z) and (A&#45;Z)" alt="" coords="281,5,347,32"/>
+<area shape="rect" id="node2" href="$ctype_8h.html#a357ec9af292f97516a2e1580eab30c31" title="Check a character is an alphabetic and number character or not. Ex. (a&#45;z) (A&#45;Z) (0&#45;9)" alt="" coords="120,5,233,32"/>
+<area shape="rect" id="node3" href="$ctype_8h.html#ab59c8e3eb783bf0d8c169d0fd78da03d" title="Check a character is a punctuation character or not. Ex. ! &quot; # $ % &amp; &#39; ( ) * + , &#45; ...." alt="" coords="5,5,72,32"/>
+</map>

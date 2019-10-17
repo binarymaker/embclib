@@ -1,4 +1,24 @@
 var searchData=
 [
-  ['limit',['Limit',['../utils_8h.html#a1eb4beecbaa877839babe8b07205b28c',1,'utils.h']]]
+  ['int16_5fmax',['INT16_MAX',['../group___sign_int_limits.html#gac58f2c111cc9989c86db2a7dc4fd84ca',1,'stdint.h']]],
+  ['int16_5fmin',['INT16_MIN',['../group___sign_int_limits.html#gad4e9955955b27624963643eac448118a',1,'stdint.h']]],
+  ['int16_5ft',['int16_t',['../group___int_type_def.html#ga932e6ccc3d54c58f761c1aead83bd6d7',1,'stdint.h']]],
+  ['int32_5fmax',['INT32_MAX',['../group___sign_int_limits.html#ga181807730d4a375f848ba139813ce04f',1,'stdint.h']]],
+  ['int32_5fmin',['INT32_MIN',['../group___sign_int_limits.html#ga688eb21a22db27c2b2bd5836943cdcbe',1,'stdint.h']]],
+  ['int32_5ft',['int32_t',['../group___int_type_def.html#gadb828ef50c2dbb783109824e94cf6c47',1,'stdint.h']]],
+  ['int8_5fmax',['INT8_MAX',['../group___sign_int_limits.html#gaaf7f29f45f1a513b4748a4e5014ddf6a',1,'stdint.h']]],
+  ['int8_5fmin',['INT8_MIN',['../group___sign_int_limits.html#gaadcf2a81af243df333b31efa6461ab8e',1,'stdint.h']]],
+  ['int8_5ft',['int8_t',['../group___int_type_def.html#gaef44329758059c91c76d334e8fc09700',1,'stdint.h']]],
+  ['isalpha',['IsAlpha',['../ctype_8h.html#a2064e0f5e74bb3ff6a091475a87a50c4',1,'ctype.h']]],
+  ['isalphanumeric',['IsAlphaNumeric',['../ctype_8h.html#a357ec9af292f97516a2e1580eab30c31',1,'ctype.h']]],
+  ['isascii',['IsAscii',['../ctype_8h.html#a51b1286b65e34f81898f0f1ed145e21c',1,'ctype.h']]],
+  ['iscontrol',['IsControl',['../ctype_8h.html#aef37c78d8554eb510a3c51d988422cab',1,'ctype.h']]],
+  ['isdigit',['IsDigit',['../ctype_8h.html#a1ee80978436701749bbca0d574a740a4',1,'ctype.h']]],
+  ['isgraph',['IsGraph',['../ctype_8h.html#a70fc502ae4f604c62c948d4363819343',1,'ctype.h']]],
+  ['ishexdigit',['IsHexDigit',['../ctype_8h.html#a98b6c1a6588bf374c57fa748b49dafbd',1,'ctype.h']]],
+  ['islower',['IsLower',['../ctype_8h.html#a382acd20996fce72118494fa1a8f34ef',1,'ctype.h']]],
+  ['isprintable',['IsPrintable',['../ctype_8h.html#af337432368356364142bb9cdc9259b41',1,'ctype.h']]],
+  ['ispunct',['IsPunct',['../ctype_8h.html#ab59c8e3eb783bf0d8c169d0fd78da03d',1,'ctype.h']]],
+  ['isspace',['IsSpace',['../ctype_8h.html#a8f83a7205e141aa68efc0659b32f03b6',1,'ctype.h']]],
+  ['isupper',['IsUpper',['../ctype_8h.html#a68f24cd2574fc0a1e04c47dfea828d21',1,'ctype.h']]]
 ];

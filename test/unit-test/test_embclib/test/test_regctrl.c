@@ -20,7 +20,8 @@
 
 #include "unity.h"
 #include "regctrl.h"
-#include "types.h"
+#include "stdint.h"
+#include "stddef.h"
 
 void
 setUp()

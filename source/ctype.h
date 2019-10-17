@@ -16,17 +16,17 @@
   * this distribution.
   * Written by Binary Maker <https://github.com/binarymaker>
   ******************************************************************************
-\endcond */
+  \endcond*/
 
 /**
- * \file types.h
+ * \file ctype.h
  * \author Binary Maker (https://github.com/binarymaker)
- * \brief Standard types and ctype function library
+ * \brief Standard ascii character handling function library
  * \date 2019-10-10
  */
 
-#ifndef TYPES_05076ec2_ea68_11e9_8db3_705a0f25cb51
-#define TYPES_05076ec2_ea68_11e9_8db3_705a0f25cb51
+#ifndef CTYPE_fb03932e_efff_11e9_b700_705a0f25cb51
+#define CTYPE_fb03932e_efff_11e9_b700_705a0f25cb51
 
 #ifdef __cplusplus
  extern "C" {
@@ -37,43 +37,10 @@
  *        
  *        version info: [15:8] main [7:0] beta
  */
-#define __TYPES_VERSION      (0x0001u) /*!< version: 0.1v */
+#define __CTYPE_VERSION      (0x0001u) /*!< version: 0.1v */
 
-#include "inttype.h"
-
-#define _ASM_            __asm                 /*!< asm keyword for target Compiler   */
-#define _INLINE_         inline                /*!< inline keyword for target Compiler*/
-#define _STATIC_INLINE_  static inline         /*!< static inline combination for \
-                                                                inline function */
-
-/**
- * \brief Boolean data type
- * 
- */
-typedef enum{
-  FALSE = 0,
-  TRUE
-}bool_et;
-
-/**
- * \brief Logical state data type 
- * 
- */
-typedef enum{
-  LOW = 0,
-  HIGH
-}state_et;
-
-/**
- * \brief Process (or) Functional state data type
- * 
- */
-typedef enum{
-  FAILED = 0,
-  SUCCESS,
-  BUSY,
-  TIMEOUT
-}status_et;
+#include "complier-cfg.h"
+#include "stddef.h"
 
 /**
  * \brief Check a character is an alphabet or not.
@@ -326,8 +293,9 @@ ToUpper(uint8_t ch)
   return (ch);
 }
 
+
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* TYPES_05076ec2_ea68_11e9_8db3_705a0f25cb51 */
+#endif /* CTYPE_fb03932e_efff_11e9_b700_705a0f25cb51 */

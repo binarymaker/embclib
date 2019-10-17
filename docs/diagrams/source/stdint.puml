@@ -1,6 +1,6 @@
-@startuml inttype
+@startuml stdint
 
-class inttype << typedef >>
+class stdint << typedef >>
 {
   int8_t : signed char
   int16_t : signed int
@@ -31,7 +31,7 @@ class inttype << typedef >>
   + UINT32_MIN  0u
 }
 
-hide inttype circle
-hide inttype Attribute
+hide stdint circle
+hide stdint Attribute
 
 @enduml

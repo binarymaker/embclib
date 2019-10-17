@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pow2',['Pow2',['../utils_8h.html#a52a0fbafccbdb110ee8c10275cd2884f',1,'utils.h']]]
+  ['max',['Max',['../utils_8h.html#a4886a8f966a69949cefc46a6a3468006',1,'utils.h']]],
+  ['min',['Min',['../utils_8h.html#a9e04209162ea72f9985338596262b657',1,'utils.h']]]
 ];

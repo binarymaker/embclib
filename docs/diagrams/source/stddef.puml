@@ -1,0 +1,38 @@
+@startuml stddef
+
+class stddef << typedef >>
+{
+  + bool_et : bool_e
+  + state_et : state_e
+  + status_et : Status_e
+}
+
+enum bool_e
+{
+    FALSE
+    TRUE
+}
+
+enum state_e
+{
+    LOW
+    HIGH
+}
+
+enum status_e
+{
+    FAILED,
+    SUCCESS,
+    BUSY,
+    TIMEOUT
+}
+
+hide enum method
+hide stddef method
+
+bool_e -up-> stddef
+state_e -up-> stddef
+status_e -up-> stddef
+
+
+@enduml

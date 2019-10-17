@@ -1,4 +1,4 @@
-/**
+/**\cond
   ******************************************************************************
   * ______  _                             ___  ___        _               
   * | ___ \(_)                            |  \/  |       | |              
@@ -16,4 +16,29 @@
   * this distribution.
   * Written by Binary Maker <https://github.com/binarymaker>
   ******************************************************************************
-  */
+  \endcond*/
+
+/**
+ * \file complier-cfg.h
+ * \author Binary Maker (https://github.com/binarymaker)
+ * \brief complier relative macros for optimization
+ * \date 2019-10-16
+ */
+
+#ifndef COMPLIER_e5a3b768_f000_11e9_95e9_705a0f25cb51
+#define COMPLIER_e5a3b768_f000_11e9_95e9_705a0f25cb51
+
+#ifdef __cplusplus
+ extern "C" {
+#endif
+
+#define _ASM_            __asm                 /*!< asm keyword for target Compiler   */
+#define _INLINE_         inline                /*!< inline keyword for target Compiler*/
+#define _STATIC_INLINE_  static inline         /*!< static inline combination for \
+                                                                inline function */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* COMPLIER_e5a3b768_f000_11e9_95e9_705a0f25cb51 */
