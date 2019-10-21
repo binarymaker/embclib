@@ -156,6 +156,15 @@ def main():
         cfg_file = open(src_path,'w')
         cfg_create(cfg_file, args['file_name'])
         print("file create", src_path)
+
+    src_path = (path_cfg + '-cfg.c')
+
+    if(path.exists(src_path)):
+        print("file exists", src_path)
+    else:
+        cfg_src_file = open(src_path,'w')
+        src_create(cfg_src_file)
+        print("file create", src_path)
     
 
 if __name__ == "__main__":
