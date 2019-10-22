@@ -55,9 +55,18 @@ header_incl_tmpl = \
  extern "C" {
 #endif
 
+/**
+ * \brief Source file version tag
+ *        
+ *        version info: [15:8] main [7:0] beta
+ */
 #define __%(filename)s_VERSION      (0x0001u)
 
-
+/* Includes ------------------------------------------------------------------*/
+/* Exported types ------------------------------------------------------------*/
+/* Exported constants --------------------------------------------------------*/
+/* Exported macro ------------------------------------------------------------*/
+/* Exported functions ------------------------------------------------------- */
 
 
 #ifdef __cplusplus
@@ -65,6 +74,18 @@ header_incl_tmpl = \
 #endif
 
 #endif /* %(filename)s_%(uuid)s */
+
+"""
+
+source_tmpl = \
+"""
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
+/* Private functions ---------------------------------------------------------*/
+
 """
 
 config_incl_tmpl = \
@@ -76,6 +97,11 @@ config_incl_tmpl = \
  extern "C" {
 #endif
 
+/* Includes ------------------------------------------------------------------*/
+/* Exported types ------------------------------------------------------------*/
+/* Exported constants --------------------------------------------------------*/
+/* Exported macro ------------------------------------------------------------*/
+/* Exported functions ------------------------------------------------------- */
 
 
 #ifdef __cplusplus
@@ -83,6 +109,7 @@ config_incl_tmpl = \
 #endif
 
 #endif /* %(filename)s_%(uuid)s */
+
 """
 
 def h_create (file_handle, fname):
@@ -101,6 +128,7 @@ def cfg_create (file_handle, fname):
 
 def src_create (file_handle):
     file_handle.write (copyright_tmpl)
+    file_handle.write (source_tmpl)
     file_handle.close ()
 
 def main():
