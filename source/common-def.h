@@ -71,6 +71,12 @@ typedef enum{
   TIMEOUT
 }status_et;
 
+/**
+ * \brief Time holding 32bit variable data type
+ * 
+ */
+typedef uint32_t time_t;
+
 #ifdef __cplusplus
 }
 #endif
