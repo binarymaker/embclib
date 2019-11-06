@@ -41,6 +41,8 @@
 
 #include "stdint.h"
 
+#define DISABLE                                                             (0U)
+#define ENABLE                                                           (0x01U)
 
 /**
  * \brief Boolean data type
