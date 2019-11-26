@@ -1,0 +1,6 @@
+//-i%COMPILER_DIR%
+
+-i%PROJECT_DIR%\source\
+-i%PROJECT_DIR%\source\stdint\
+-i%PROJECT_DIR%\config\
+-i%PROJECT_DIR%\test\unit-test\test_embclib\test\

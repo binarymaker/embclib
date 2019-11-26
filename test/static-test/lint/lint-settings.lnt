@@ -1,0 +1,17 @@
+%CUSTOM_LINT_DIR%\lint-env-var.lnt
+
+-setenv(SOURCE_DIR=%PROJECT_DIR%"\example\gpio.X")
+
+-i%PCLINT_LNT_DIR%
+-i%COMPILER_DIR%
+-i%CUSTOM_LINT_DIR%
+-i%SOURCE_DIR%
+
+%CUSTOM_LINT_DIR%\include-path.lnt
+// -------------- Rules Setup --------------
+au-misra3.lnt // Use Misra C 2012 rules
+
+// -------------- Compiler Setup --------------
+//C:/lint/lnt/co-xc16.lnt // Helper for XC8 Compiler
+
+%CUSTOM_LINT_DIR%\errorignore.lnt

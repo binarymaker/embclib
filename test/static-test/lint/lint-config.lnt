@@ -1,0 +1,3 @@
+-setenv(PROJECT_DIR="f:\GOK\Bridge\Binarymaker-library\embclib")
+-setenv(CUSTOM_LINT_DIR="f:\GOK\Bridge\Binarymaker-library\embclib\test\static-test\lint")
+%CUSTOM_LINT_DIR%\lint-settings.lnt

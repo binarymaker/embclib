@@ -1,0 +1,5 @@
+// Environment Variables
+// Set up environment variables for compiler header files directory and base source files directory
+
+-setenv(PCLINT_LNT_DIR="C:\lint\lnt")
+-setenv(COMPILER_DIR="")
