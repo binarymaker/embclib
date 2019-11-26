@@ -27,52 +27,36 @@
 
 #define __REGCTRL_VERSION      (0x0001u)
 
-#define BIT_Mask(bitpos)             (1 << (bitpos))
-#define BIT_MaskFill(bitpos)         (BIT_Mask((bitpos)) - 1)
+/* Exported macro ------------------------------------------------------------*/
+#define BIT(bitpos)                                             (1 << (bitpos))
+#define BIT_Mask(bitpos)                                        (1 << (bitpos))
+#define BIT_MaskFill(bitpos)                           (BIT_Mask((bitpos)) - 1)
+#define BIT_Set(reg, bitpos)                     ((reg) |=  BIT_Mask((bitpos)))
+#define BIT_Clear(reg, bitpos)                   ((reg) &= ~BIT_Mask((bitpos)))
+#define BIT_Read(reg, bitpos)                      (((reg) >> (bitpos)) & 0x1U)
+#define BIT_Toggle(reg, bitpos)                  ((reg) ^=  BIT_Mask((bitpos)))
+#define BIT_Write(reg, bitpos, val)                                           \
+                ((val) ? BIT_Set((reg), (bitpos)) : BIT_Clear((reg), (bitpos)))
+     
+#define BIT_IsSet(reg, bitpos)                      (BIT_Read((reg), (bitpos)))
+#define BIT_IsClear(reg, bitpos)            (BIT_Read((reg), (bitpos)) == 0x0U)
+#define BIT_IsAllSet(reg, mask)                    (((reg) & (mask)) == (mask))
+#define BIT_IsAnySet(reg, mask)                      (((reg) & (mask)) != 0x0U)
 
-#define BIT_Set(reg, bitpos)      \
-    ((reg) |=  BIT_Mask((bitpos)))
+#define REG_Clear(reg, val)                                   ((reg) &= ~(val))
+#define REG_Write(reg, val)                                     ((reg) = (val))
+#define REG_Read(reg)                                                   ((reg))
+#define REG_Update(reg)                                        ((reg) |= (val))
+#define REG_Merge(reg, val, mask)                                             \
+                                 ((reg) = ((reg) & ~(mask)) | ((val) & (mask)))
+#define REG_GroupRead(reg, bitpos, len)                                       \
+                                    (((reg) >> (bitpos)) & BIT_MaskFill((len)))
+#define REG_GroupWrite(reg, val, bitpos)            ((reg) = (val) << (bitpos))
 
-#define BIT_Clear(reg, bitpos)    \
-    ((reg) &= ~BIT_Mask((bitpos)))
-
-#define BIT_Read(reg, bitpos)     \
-    (((reg) >> (bitpos)) & 0x1U)
-
-#define BIT_Toggle(reg, bitpos)   \
-    ((reg) ^=  BIT_Mask((bitpos)))
-
-#define REG_Clear(reg)         \
-    ((reg)  =  (0x0))
-
-#define REG_Write(reg, val)    \
-    ((reg)  =  (val))
-
-#define REG_Read(reg)     ((reg))
-
-#define REG_Modify(reg, setmask, clearmask)  \
-REG_Write((reg), (((REG_Read(reg)) & (~(clearmask))) | (setmask)))
-
-#define REG_Cut(reg, bitpos, len)   \
-    (((reg) >> (bitpos)) & BIT_MaskFill((len)))
-
-#define REG_Shift(val, bitpos)      \
-    ( (val) << (bitpos)) 
-
-#define REG_RightShift(val, bitpos)  \
-    ((val) >> (bitpos)) 
-
-#define BIT_IsSet(reg, bitpos)       \
-    (BIT_Read((reg), (bitpos)))
-
-#define BIT_IsClear(reg, bitpos)     \
-    (BIT_Read((reg), (bitpos)) == 0x0U)
-
-#define BIT_IsAllSet(reg, mask)         \
-    (((reg) & (mask)) == (mask))
-
-#define BIT_IsAnySet(reg, mask)         \
-    (((reg) & (mask)) != 0x0U)
+#define REG_Shift(val, bitpos)                              ((val) << (bitpos))
+#define REG_RightShift(val, bitpos)                         ((val) >> (bitpos))
+#define REG_Modify(reg, setmask, clearmask)                                   \
+             REG_Write((reg), (((REG_Read(reg)) & (~(clearmask))) | (setmask)))
 
 #ifdef __cplusplus
 }

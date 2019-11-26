@@ -19,14 +19,14 @@
 \endcond */
 
 /**
- * \file stddef.h
+ * \file common-def.h
  * \author Binary Maker (https://github.com/binarymaker)
  * \brief Standard types and ctype function library
  * \date 2019-10-10
  */
 
-#ifndef STDDEF_05076ec2_ea68_11e9_8db3_705a0f25cb51
-#define STDDEF_05076ec2_ea68_11e9_8db3_705a0f25cb51
+#ifndef COMMOM_DEF_05076ec2_ea68_11e9_8db3_705a0f25cb51
+#define COMMOM_DEF_05076ec2_ea68_11e9_8db3_705a0f25cb51
 
 #ifdef __cplusplus
  extern "C" {
@@ -37,10 +37,12 @@
  *        
  *        version info: [15:8] main [7:0] beta
  */
-#define __TYPES_VERSION      (0x0001u) /*!< version: 0.1v */
+#define __COMMON_DEF_VERSION      (0x0001u) /*!< version: 0.1v */
 
 #include "stdint.h"
 
+#define DISABLE                                                             (0U)
+#define ENABLE                                                           (0x01U)
 
 /**
  * \brief Boolean data type
@@ -71,8 +73,14 @@ typedef enum{
   TIMEOUT
 }status_et;
 
+/**
+ * \brief Time holding 32bit variable data type
+ * 
+ */
+typedef uint32_t time_t;
+
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* STDDEF_05076ec2_ea68_11e9_8db3_705a0f25cb51 */
+#endif /* COMMOM_DEF_05076ec2_ea68_11e9_8db3_705a0f25cb51 */
