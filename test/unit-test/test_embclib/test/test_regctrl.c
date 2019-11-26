@@ -21,7 +21,7 @@
 #include "unity.h"
 #include "regctrl.h"
 #include "stdint.h"
-#include "stddef.h"
+#include "common-def.h"
 
 void
 setUp()
@@ -88,6 +88,6 @@ test_RegCut()
 {
   uint16_t res; 
 
-  res = REG_Cut(100, 2, 5);
+  res = REG_GroupRead(100, 2, 5);
   TEST_ASSERT_EQUAL(25, res);
 }

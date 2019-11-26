@@ -32,10 +32,13 @@
  extern "C" {
 #endif
 
+#include "stdint.h"
+
 #define _ASM_            __asm                 /*!< asm keyword for target Compiler   */
 #define _INLINE_         inline                /*!< inline keyword for target Compiler*/
 #define _STATIC_INLINE_  static inline         /*!< static inline combination for \
                                                                 inline function */
+typedef uint8_t sfr_t;
 
 #ifdef __cplusplus
 }

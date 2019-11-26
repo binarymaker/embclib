@@ -40,7 +40,7 @@
 #define __CTYPE_VERSION      (0x0001u) /*!< version: 0.1v */
 
 #include "complier-cfg.h"
-#include "stddef.h"
+#include "common-def.h"
 
 /**
  * \brief Check a character is an alphabet or not.
