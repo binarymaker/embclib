@@ -1,0 +1,4 @@
+[submodule "scripts"]
+	path = scripts
+	url = https://github.com/binarymaker/project-manager-tools.git
+	branch = library
