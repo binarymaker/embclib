@@ -38,6 +38,9 @@
 #define _INLINE_         inline                /*!< inline keyword for target Compiler*/
 #define _STATIC_INLINE_  static inline         /*!< static inline combination for \
                                                                 inline function */
+
+#define NULL    0
+     
 typedef uint8_t sfr_t;
 
 #ifdef __cplusplus
