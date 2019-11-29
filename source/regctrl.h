@@ -27,21 +27,22 @@
 
 #define __REGCTRL_VERSION      (0x0001u)
 
+#include "complier-cfg.h"
 /* Exported macro ------------------------------------------------------------*/
-#define BIT(bitpos)                                             (1 << (bitpos))
-#define BIT_Mask(bitpos)                                        (1 << (bitpos))
-#define BIT_MaskFill(bitpos)                           (BIT_Mask((bitpos)) - 1)
+#define BIT(bitpos)                                            BIT_Mask(bitpos)
+#define BIT_Mask(bitpos)                                ((sfr_t)1U << (bitpos))
+#define BIT_MaskFill(bitpos)                          (BIT_Mask((bitpos)) - 1U)
 #define BIT_Set(reg, bitpos)                     ((reg) |=  BIT_Mask((bitpos)))
 #define BIT_Clear(reg, bitpos)                   ((reg) &= ~BIT_Mask((bitpos)))
-#define BIT_Read(reg, bitpos)                      (((reg) >> (bitpos)) & 0x1U)
+#define BIT_Read(reg, bitpos)                        (((reg) >> (bitpos)) & 1U)
 #define BIT_Toggle(reg, bitpos)                  ((reg) ^=  BIT_Mask((bitpos)))
 #define BIT_Write(reg, bitpos, val)                                           \
                 ((val) ? BIT_Set((reg), (bitpos)) : BIT_Clear((reg), (bitpos)))
      
 #define BIT_IsSet(reg, bitpos)                      (BIT_Read((reg), (bitpos)))
-#define BIT_IsClear(reg, bitpos)            (BIT_Read((reg), (bitpos)) == 0x0U)
+#define BIT_IsClear(reg, bitpos)              (BIT_Read((reg), (bitpos)) == 0U)
 #define BIT_IsAllSet(reg, mask)                    (((reg) & (mask)) == (mask))
-#define BIT_IsAnySet(reg, mask)                      (((reg) & (mask)) != 0x0U)
+#define BIT_IsAnySet(reg, mask)                        (((reg) & (mask)) != 0U)
 
 #define REG_Clear(reg, val)                                   ((reg) &= ~(val))
 #define REG_Write(reg, val)                                     ((reg) = (val))
