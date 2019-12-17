@@ -77,7 +77,7 @@ typedef enum{
  * \brief Time holding 32bit variable data type
  * 
  */
-#ifndef _TIME_T_DEFINED
+#ifdef __AVR__
 typedef uint32_t time_t;
 #endif
 
