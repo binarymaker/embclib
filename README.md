@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/binarymaker/embclib.svg?branch=develop)](https://travis-ci.org/binarymaker/embclib)
+
 # Embedded project core library. 
  
   This library contains essential function and standard datatype used in embedded projects.
