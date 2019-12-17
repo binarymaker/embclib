@@ -1,4 +1,4 @@
-/**\cond
+/**
   ******************************************************************************
   * ______  _                             ___  ___        _               
   * | ___ \(_)                            |  \/  |       | |              
@@ -16,36 +16,78 @@
   * this distribution.
   * Written by Binary Maker <https://github.com/binarymaker>
   ******************************************************************************
-  \endcond*/
+  */
 
-/**
- * \file complier-cfg.h
- * \author Binary Maker (https://github.com/binarymaker)
- * \brief complier relative macros for optimization
- * \date 2019-10-16
- */
-
-#ifndef COMPLIER_e5a3b768_f000_11e9_95e9_705a0f25cb51
-#define COMPLIER_e5a3b768_f000_11e9_95e9_705a0f25cb51
-
-#ifdef __cplusplus
- extern "C" {
-#endif
-
+#include "unity.h"
+#include "regctrl.h"
 #include "stdint.h"
+#include "common-def.h"
 
-#define _ASM_            __asm                 /*!< asm keyword for target Compiler   */
-#define _INLINE_         inline                /*!< inline keyword for target Compiler*/
-#define _STATIC_INLINE_  static inline         /*!< static inline combination for \
-                                                                inline function */
-#ifndef NULL
-#define NULL    0
-#endif
+void
+setUp()
+{
 
-typedef uint8_t sfr_t;
-
-#ifdef __cplusplus
 }
-#endif
 
-#endif /* COMPLIER_e5a3b768_f000_11e9_95e9_705a0f25cb51 */
+void
+tearDown()
+{
+
+}
+
+void
+test_bitMask()
+{
+  uint16_t res; 
+  
+  res = BIT_Mask(5);
+  TEST_ASSERT_EQUAL(32, res);
+  
+  res = BIT_Mask(15);
+  TEST_ASSERT_EQUAL(32768, res);
+}
+
+void
+test_bitMaskFill()
+{
+  uint16_t res; 
+  
+  res = BIT_MaskFill(5);
+  TEST_ASSERT_EQUAL(31, res);
+  
+  res = BIT_MaskFill(15);
+  TEST_ASSERT_EQUAL(32767, res);
+}
+
+void
+test_IsAnyBitSet()
+{
+  uint16_t res; 
+  
+  res = BIT_IsAnySet(5, 0x01);
+  TEST_ASSERT_EQUAL(TRUE, res);
+  
+  res = BIT_IsAnySet(15, 0x08);
+  TEST_ASSERT_EQUAL(TRUE, res);
+}
+
+void
+test_IsAllBitSet()
+{
+  uint16_t res; 
+
+  res = BIT_IsAllSet(15, 0x0f);
+  TEST_ASSERT_EQUAL(TRUE, res);
+  
+  res = BIT_IsAllSet(25, 0x19);
+  TEST_ASSERT_EQUAL(TRUE, res);
+}
+
+void
+test_RegCut()
+{
+  uint16_t res; 
+
+  res = REG_GroupRead(100, 2, 5);
+  TEST_ASSERT_EQUAL(25, res);
+}

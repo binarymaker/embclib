@@ -1,4 +1,16 @@
 /*
 !/.gitignore
+!/.travis.yml
+!/README.md
 !/config
 !/source
+
+# Ceedling test case
+!/test/
+/test/*
+!/test/unit-test/
+/test/unit-test/*
+!/test/unit-test/test*/
+
+# Ceedling build directory
+test/**/build/
