@@ -17,5 +17,4 @@ script:
   - ceedling gcov:all utils:gcov
 
 after_success:
-  - cd test/unit-test/test_embclib/build/
   - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
