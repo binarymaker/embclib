@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/binarymaker/embclib.svg?branch=develop)](https://travis-ci.org/binarymaker/embclib) [![codecov](https://codecov.io/gh/binarymaker/embclib/branch/master/graph/badge.svg)](https://codecov.io/gh/binarymaker/embclib)
+[![Build Status](https://travis-ci.org/binarymaker/embclib.svg?branch=develop)](https://travis-ci.org/binarymaker/embclib) [![codecov](https://codecov.io/gh/binarymaker/embclib/branch/develop/graph/badge.svg)](https://codecov.io/gh/binarymaker/embclib)
 
 # Embedded project core library. 
  
