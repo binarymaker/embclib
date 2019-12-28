@@ -50,11 +50,29 @@ test_crc_2size_array()
 void
 test_crc_string_array()
 {
+  /**
+    * https://crccalc.com/?crc=binarymaker&method=crc8&datatype=ascii&outtype=hex
+    */
   uint8_t data_8u_array[] = "binarymaker";
   uint8_t crc_res;
 
   crc_res = crc8_ccitt(data_8u_array, 11);
 
   TEST_ASSERT_EQUAL_HEX8(0xC4, crc_res);
+  
+}
+
+void
+test_crc_exit_size_is_zero()
+{
+  /**
+    * https://crccalc.com/?crc=binarymaker&method=crc8&datatype=ascii&outtype=hex
+    */
+  uint8_t data_8u_array[] = {0,2,4};
+  uint8_t crc_res;
+
+  crc_res = crc8_ccitt(data_8u_array, 0);
+
+  TEST_ASSERT_EQUAL_HEX8(0x00, crc_res);
   
 }
