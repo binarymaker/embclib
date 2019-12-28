@@ -29,9 +29,8 @@
   :test:
     - +:test/**
   :source:
-    - +:../../../source/**
-    - -:../../../source/stdint/**
-    - +:../../../config/**
+    - ../../../source/**
+    - ../../../config/**
   :support:
 
 :defines:
