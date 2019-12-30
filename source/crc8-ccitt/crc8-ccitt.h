@@ -40,7 +40,7 @@
 /* Exported functions ------------------------------------------------------- */
 
 uint8_t 
-crc8_ccitt(const void * data, uint8_t size);
+CRC8_Calculate(const void * data, uint8_t size);
 
 #ifdef __cplusplus
 }

@@ -44,7 +44,7 @@ test_crc_2size_array()
   uint8_t data_u8arr[] = {0x01, 0x02};
   uint8_t crc_res;
 
-  crc_res = crc8_ccitt(data_u8arr, sizeof(data_u8arr));
+  crc_res = CRC8_Calculate(data_u8arr, sizeof(data_u8arr));
 
   TEST_ASSERT_EQUAL_HEX8(0x1B, crc_res);
 }
@@ -58,7 +58,7 @@ test_crc_string_array()
   uint8_t data_u8arr[] = "binarymaker";
   uint8_t crc_res;
 
-  crc_res = crc8_ccitt(data_u8arr, 11);
+  crc_res = CRC8_Calculate(data_u8arr, 11);
 
   TEST_ASSERT_EQUAL_HEX8(0xC4, crc_res);
   
@@ -70,7 +70,7 @@ test_crc_exit_size_is_zero()
   uint8_t data_u8arr[] = {0,2,4};
   uint8_t crc_res;
 
-  crc_res = crc8_ccitt(data_u8arr, 0);
+  crc_res = CRC8_Calculate(data_u8arr, 0);
 
   TEST_ASSERT_EQUAL_HEX8(0x00, crc_res);
   
@@ -85,7 +85,7 @@ test_crc_16bit_data_to_crc8()
   uint16_t data_16u_array[] = {0x3256,0x6981}; /* is equ to {0x56, 0x32}, {0x81, 0x69}*/
   uint8_t crc_res;
 
-  crc_res = crc8_ccitt(data_16u_array, sizeof(data_16u_array));
+  crc_res = CRC8_Calculate(data_16u_array, sizeof(data_16u_array));
 
   TEST_ASSERT_EQUAL_HEX8(0x04, crc_res);
   
