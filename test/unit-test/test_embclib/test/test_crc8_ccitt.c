@@ -41,10 +41,10 @@ tearDown()
 void
 test_crc_2size_array()
 {
-  uint8_t data_8u_array[] = {0x01, 0x02};
+  uint8_t data_u8arr[] = {0x01, 0x02};
   uint8_t crc_res;
 
-  crc_res = crc8_ccitt(data_8u_array, sizeof(data_8u_array));
+  crc_res = crc8_ccitt(data_u8arr, sizeof(data_u8arr));
 
   TEST_ASSERT_EQUAL_HEX8(0x1B, crc_res);
 }
@@ -55,10 +55,10 @@ test_crc_string_array()
   /**
     * https://crccalc.com/?crc=binarymaker&method=crc8&datatype=ascii&outtype=hex
     */
-  uint8_t data_8u_array[] = "binarymaker";
+  uint8_t data_u8arr[] = "binarymaker";
   uint8_t crc_res;
 
-  crc_res = crc8_ccitt(data_8u_array, 11);
+  crc_res = crc8_ccitt(data_u8arr, 11);
 
   TEST_ASSERT_EQUAL_HEX8(0xC4, crc_res);
   
@@ -67,10 +67,10 @@ test_crc_string_array()
 void
 test_crc_exit_size_is_zero()
 {
-  uint8_t data_8u_array[] = {0,2,4};
+  uint8_t data_u8arr[] = {0,2,4};
   uint8_t crc_res;
 
-  crc_res = crc8_ccitt(data_8u_array, 0);
+  crc_res = crc8_ccitt(data_u8arr, 0);
 
   TEST_ASSERT_EQUAL_HEX8(0x00, crc_res);
   

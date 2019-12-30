@@ -63,23 +63,23 @@ static const uint8_t CRC8_TABLE[256] = {
 /* Private functions ---------------------------------------------------------*/
 
 uint8_t
-crc8_ccitt(const void * data, uint8_t size_8u)
+crc8_ccitt(const void * data, uint8_t size_u8)
 {
-  uint8_t checksum = 0;
+  uint8_t crc_u8 = 0u;
   
-  uint8_t * pos_8u_ptr = (uint8_t *) data;
-  uint8_t * end_8u_ptr = pos_8u_ptr + size_8u;
+  uint8_t * pos_u8ptr = (uint8_t *) data;
+  uint8_t * end_u8ptr = pos_u8ptr + size_u8;
   
-  if(!size_8u)
+  if(!size_u8)
   {
     return (0);
   }
   
-  while (pos_8u_ptr < end_8u_ptr)
+  while (pos_u8ptr < end_u8ptr)
   {
-    checksum = CRC8_TABLE[checksum ^ *pos_8u_ptr];
-    pos_8u_ptr++;
+    crc_u8 = CRC8_TABLE[crc_u8 ^ *pos_u8ptr];
+    pos_u8ptr++;
   }
   
-  return checksum;
+  return crc_u8;
 }
