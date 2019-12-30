@@ -63,6 +63,12 @@ static const uint8_t CRC8_TABLE[256] = {
 /* Private functions ---------------------------------------------------------*/
 
 uint8_t
+CRC8_Table(uint8_t data_u8)
+{
+  return (CRC8_TABLE[data_u8]);
+}
+
+uint8_t
 CRC8_Calculate(const void * data, uint8_t size_u8)
 {
   uint8_t crc_u8 = 0u;

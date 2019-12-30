@@ -39,6 +39,9 @@
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
 
+uint8_t
+CRC8_Table(uint8_t data_u8);
+
 uint8_t 
 CRC8_Calculate(const void * data, uint8_t size);
 
